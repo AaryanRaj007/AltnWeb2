@@ -1,0 +1,136 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Separator from "../components/Separator.astro";
+---
+
+<MainLayout
+    title="Plugins"
+    description="Custom DaVinci Resolve Studio workflow plugins built by altn."
+>
+    <div class="flex flex-col gap-12 w-full max-w-6xl mx-auto px-4 sm:px-0">
+        <!-- Header -->
+        <div class="flex flex-col items-center gap-1 text-center">
+            <h1 class="!mb-1">da vinci plugins</h1>
+            <div class="text-sayso-text/50 font-medium">
+                in-app workflow tools built for real editing pipelines
+            </div>
+        </div>
+
+        <!-- Featured Plugin Spotlight -->
+        <section class="w-full flex flex-col rounded-2xl border border-sayso-text/10 bg-sayso-yellow/5 p-6 sm:p-10 shadow-lg">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Video Showcase Player -->
+                <div class="relative w-full rounded-xl overflow-hidden border border-sayso-text/15 bg-black/60 shadow-2xl">
+                    <video 
+                        class="w-full h-full object-cover rounded-xl"
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                        controls
+                        poster="/og-banner.png"
+                    >
+                        <source src="/plugin-demo.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-sayso-yellow text-xs font-bold tracking-wide">
+                        LIVE DEMO
+                    </div>
+                </div>
+
+                <!-- Info & CTA -->
+                <div class="flex flex-col gap-5">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sayso-yellow/15 text-sayso-yellow border border-sayso-yellow/30 text-xs font-bold w-fit">
+                        DAVINCI RESOLVE PLUGIN
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl !m-0 leading-tight">
+                        YouTube Media Importer
+                    </h2>
+
+                    <p class="text-sayso-text/75 text-base sm:text-lg leading-relaxed !m-0">
+                        Browse YouTube live inside DaVinci Resolve. Download and import video & audio directly into your active project's <b>Media Pool</b> in one click — zero manual file dragging required.
+                    </p>
+
+                    <!-- Feature Tags -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 my-1">
+                        <div class="flex items-start gap-3 text-sm font-medium text-sayso-text/85">
+                            <span class="w-2 h-2 rounded-full bg-sayso-yellow shrink-0 mt-1.5"></span>
+                            <span class="leading-snug">Live YouTube browser overlay</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-sm font-medium text-sayso-text/85">
+                            <span class="w-2 h-2 rounded-full bg-sayso-yellow shrink-0 mt-1.5"></span>
+                            <span class="leading-snug">4 Format Presets (Merged/Audio/Video/Separate)</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-sm font-medium text-sayso-text/85">
+                            <span class="w-2 h-2 rounded-full bg-sayso-yellow shrink-0 mt-1.5"></span>
+                            <span class="leading-snug">Direct Media Pool auto-import</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-sm font-medium text-sayso-text/85">
+                            <span class="w-2 h-2 rounded-full bg-sayso-yellow shrink-0 mt-1.5"></span>
+                            <span class="leading-snug">1-Click macOS .dmg setup</span>
+                        </div>
+                    </div>
+
+                    <!-- Download Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
+                        <a
+                            href="/Altn_YouTube_Downloader_Installer.dmg"
+                            download
+                            class="px-8 py-3.5 rounded-xl bg-white text-black hover:bg-gray-200 font-bold text-center text-base !no-underline transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-95"
+                        >
+                            Download Installer (.dmg)
+                        </a>
+                        <span class="text-xs text-sayso-text/40 text-center sm:text-left">
+                            macOS 13+ · Apple Silicon & Intel
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Separator />
+
+        <!-- Setup Instructions Section -->
+        <section class="w-full space-y-6">
+            <div class="space-y-1">
+                <h2>how to install</h2>
+                <p>
+                    3 simple steps to add the plugin to your DaVinci Resolve workspace.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-xl border border-sayso-text/10 bg-sayso-yellow/5 p-6 flex flex-col gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-sayso-yellow/20 text-sayso-yellow flex items-center justify-center font-bold text-base shrink-0">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold !m-0">Download & Run</h3>
+                    <p class="text-sm text-sayso-text/65 leading-relaxed !m-0">
+                        Download <code class="text-xs px-1.5 py-0.5 rounded bg-black/30 font-mono text-sayso-yellow break-all">Installer.dmg</code> and run the setup app inside.
+                    </p>
+                </div>
+
+                <div class="rounded-xl border border-sayso-text/10 bg-sayso-yellow/5 p-6 flex flex-col gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-sayso-yellow/20 text-sayso-yellow flex items-center justify-center font-bold text-base shrink-0">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold !m-0">One-Click Setup</h3>
+                    <p class="text-sm text-sayso-text/65 leading-relaxed !m-0">
+                        Click <b>Install Plugin</b>. The installer automatically detects paths and sets up launchers.
+                    </p>
+                </div>
+
+                <div class="rounded-xl border border-sayso-text/10 bg-sayso-yellow/5 p-6 flex flex-col gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-sayso-yellow/20 text-sayso-yellow flex items-center justify-center font-bold text-base shrink-0">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold !m-0">Open in Resolve</h3>
+                    <p class="text-sm text-sayso-text/65 leading-relaxed !m-0">
+                        Launch inside Resolve via <code class="text-xs px-1.5 py-0.5 rounded bg-black/30 font-mono text-sayso-yellow block mt-2 break-all">Workspace &rarr; Scripts &rarr; Edit &rarr; LiveBrowser</code>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</MainLayout>
