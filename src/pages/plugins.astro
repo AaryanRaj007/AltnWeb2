@@ -68,22 +68,26 @@ import Separator from "../components/Separator.astro";
                         </div>
                         <div class="flex items-center gap-2.5 text-sm font-medium text-sayso-text/90 bg-black/20 border border-white/5 rounded-lg p-3 min-w-0">
                             <span class="text-sayso-yellow font-bold text-sm shrink-0">✓</span>
-                            <span class="leading-tight">1-Click macOS .dmg setup</span>
+                            <span class="leading-tight">macOS (.dmg) & Windows (.exe)</span>
                         </div>
                     </div>
 
                     <!-- Download Action Buttons -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-2">
                         <a
                             href="/Altn_YouTube_Downloader_Installer.dmg"
                             download
-                            class="px-8 py-3.5 rounded-xl bg-white text-black hover:bg-gray-200 font-bold text-center text-base !no-underline transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-95"
+                            class="px-6 py-3 rounded-xl bg-white text-black hover:bg-gray-200 font-bold text-center text-sm !no-underline transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-95"
                         >
-                            Download Installer (.dmg)
+                            macOS Installer (.dmg)
                         </a>
-                        <span class="text-xs text-sayso-text/40 text-center sm:text-left">
-                            macOS 13+ · Apple Silicon & Intel
-                        </span>
+                        <a
+                            href="/Altn_YouTube_Downloader_Installer.exe"
+                            download
+                            class="px-6 py-3 rounded-xl bg-sayso-yellow text-black hover:bg-yellow-400 font-bold text-center text-sm !no-underline transition-all hover:scale-[1.02] active:scale-95"
+                        >
+                            Windows Installer (.exe)
+                        </a>
                     </div>
                 </div>
             </div>
@@ -107,7 +111,7 @@ import Separator from "../components/Separator.astro";
                     </div>
                     <h3 class="text-xl font-bold !m-0">Download & Run</h3>
                     <p class="text-sm text-sayso-text/70 leading-relaxed !m-0">
-                        Download <code class="text-xs px-2 py-0.5 rounded bg-black/40 font-mono text-sayso-yellow whitespace-nowrap border border-white/5">Installer.dmg</code> and run setup.
+                        Download <code class="text-xs px-2 py-0.5 rounded bg-black/40 font-mono text-sayso-yellow whitespace-nowrap border border-white/5">Installer.dmg</code> or <code class="text-xs px-2 py-0.5 rounded bg-black/40 font-mono text-sayso-yellow whitespace-nowrap border border-white/5">Installer.exe</code> and run setup.
                     </p>
                 </div>
 
