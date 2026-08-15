@@ -17,23 +17,38 @@ import Separator from "../components/Separator.astro";
         </div>
 
         <!-- Featured Plugin Spotlight -->
-        <section class="w-full flex flex-col gap-10 rounded-2xl border border-sayso-text/10 bg-sayso-yellow/5 p-6 sm:p-10 shadow-lg overflow-hidden">
-            <!-- Header & Specs -->
-            <div class="flex flex-col items-center text-center gap-4 max-w-3xl mx-auto w-full">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sayso-yellow/15 text-sayso-yellow border border-sayso-yellow/30 text-xs font-bold w-fit">
-                    DAVINCI RESOLVE PLUGIN
-                </div>
-
+        <section class="w-full flex flex-col gap-8 rounded-2xl border border-sayso-text/10 bg-sayso-yellow/5 p-6 sm:p-10 shadow-lg overflow-hidden">
+            <!-- Header Title -->
+            <div class="flex flex-col items-center text-center gap-2 max-w-3xl mx-auto w-full">
                 <h2 class="text-4xl sm:text-5xl !m-0 leading-tight">
                     YouTube Media Importer
                 </h2>
+            </div>
 
+            <!-- Full-Width Huge Video Showcase Player -->
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-sayso-text/20 bg-black shadow-2xl max-w-5xl mx-auto">
+                <video 
+                    class="w-full h-full object-cover rounded-2xl"
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
+                    controls
+                    poster="/og-banner.png"
+                >
+                    <source src="/plugin-demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Description, Feature Badges & Download CTAs -->
+            <div class="flex flex-col items-center text-center gap-6 max-w-3xl mx-auto w-full">
                 <p class="text-sayso-text/75 text-lg sm:text-xl leading-relaxed !m-0">
                     Browse YouTube live inside DaVinci Resolve. Download and import video & audio directly into your active project's <b>Media Pool</b> in one click with zero manual file dragging required.
                 </p>
 
                 <!-- Feature Tags -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-2 w-full">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-1 w-full">
                     <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-sayso-text/90 bg-black/25 border border-white/5 rounded-lg p-2.5">
                         <span class="text-sayso-yellow font-bold shrink-0">✓</span>
                         <span class="leading-tight">Live YouTube overlay</span>
@@ -68,25 +83,6 @@ import Separator from "../components/Separator.astro";
                     >
                         Windows Installer (.exe)
                     </a>
-                </div>
-            </div>
-
-            <!-- Full-Width Huge Video Showcase Player -->
-            <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-sayso-text/20 bg-black shadow-2xl max-w-5xl mx-auto">
-                <video 
-                    class="w-full h-full object-cover rounded-2xl"
-                    autoplay 
-                    loop 
-                    muted 
-                    playsinline
-                    controls
-                    poster="/og-banner.png"
-                >
-                    <source src="/plugin-demo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-sayso-yellow text-xs font-bold tracking-wide">
-                    LIVE DEMO PLAYER
                 </div>
             </div>
         </section>
