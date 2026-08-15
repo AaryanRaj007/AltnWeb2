@@ -17,78 +17,76 @@ import Separator from "../components/Separator.astro";
         </div>
 
         <!-- Featured Plugin Spotlight -->
-        <section class="w-full flex flex-col rounded-2xl border border-sayso-text/10 bg-sayso-yellow/5 p-6 sm:p-10 shadow-lg overflow-hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
-                <!-- Video Showcase Player (60% width on desktop) -->
-                <div class="lg:col-span-7 relative w-full aspect-video rounded-xl overflow-hidden border border-sayso-text/15 bg-black/60 shadow-2xl">
-                    <video 
-                        class="w-full h-full object-cover rounded-xl"
-                        autoplay 
-                        loop 
-                        muted 
-                        playsinline
-                        controls
-                        poster="/og-banner.png"
-                    >
-                        <source src="/plugin-demo.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-sayso-yellow text-xs font-bold tracking-wide">
-                        LIVE DEMO
+        <section class="w-full flex flex-col gap-10 rounded-2xl border border-sayso-text/10 bg-sayso-yellow/5 p-6 sm:p-10 shadow-lg overflow-hidden">
+            <!-- Header & Specs -->
+            <div class="flex flex-col items-center text-center gap-4 max-w-3xl mx-auto w-full">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sayso-yellow/15 text-sayso-yellow border border-sayso-yellow/30 text-xs font-bold w-fit">
+                    DAVINCI RESOLVE PLUGIN
+                </div>
+
+                <h2 class="text-4xl sm:text-5xl !m-0 leading-tight">
+                    YouTube Media Importer
+                </h2>
+
+                <p class="text-sayso-text/75 text-lg sm:text-xl leading-relaxed !m-0">
+                    Browse YouTube live inside DaVinci Resolve. Download and import video & audio directly into your active project's <b>Media Pool</b> in one click with zero manual file dragging required.
+                </p>
+
+                <!-- Feature Tags -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-2 w-full">
+                    <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-sayso-text/90 bg-black/25 border border-white/5 rounded-lg p-2.5">
+                        <span class="text-sayso-yellow font-bold shrink-0">✓</span>
+                        <span class="leading-tight">Live YouTube overlay</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-sayso-text/90 bg-black/25 border border-white/5 rounded-lg p-2.5">
+                        <span class="text-sayso-yellow font-bold shrink-0">✓</span>
+                        <span class="leading-tight">MP4 & MP3 Formats</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-sayso-text/90 bg-black/25 border border-white/5 rounded-lg p-2.5">
+                        <span class="text-sayso-yellow font-bold shrink-0">✓</span>
+                        <span class="leading-tight">Media Pool auto-import</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-sayso-text/90 bg-black/25 border border-white/5 rounded-lg p-2.5">
+                        <span class="text-sayso-yellow font-bold shrink-0">✓</span>
+                        <span class="leading-tight">macOS & Windows</span>
                     </div>
                 </div>
 
-                <!-- Info & CTA (40% width on desktop) -->
-                <div class="lg:col-span-5 flex flex-col gap-5 min-w-0">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sayso-yellow/15 text-sayso-yellow border border-sayso-yellow/30 text-xs font-bold w-fit">
-                        DAVINCI RESOLVE PLUGIN
-                    </div>
+                <!-- Download Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center gap-4 mt-2">
+                    <a
+                        href="/Altn_YouTube_Downloader_Installer.dmg"
+                        download
+                        class="px-8 py-3.5 rounded-xl bg-white text-black hover:bg-gray-200 font-bold text-center text-base !no-underline transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-95"
+                    >
+                        macOS Installer (.dmg)
+                    </a>
+                    <a
+                        href="/Altn_YouTube_Downloader_Installer.exe"
+                        download
+                        class="px-8 py-3.5 rounded-xl bg-sayso-yellow text-black hover:bg-yellow-400 font-bold text-center text-base !no-underline transition-all hover:scale-[1.02] active:scale-95"
+                    >
+                        Windows Installer (.exe)
+                    </a>
+                </div>
+            </div>
 
-                    <h2 class="text-3xl sm:text-4xl !m-0 leading-tight">
-                        YouTube Media Importer
-                    </h2>
-
-                    <p class="text-sayso-text/75 text-base sm:text-lg leading-relaxed !m-0">
-                        Browse YouTube live inside DaVinci Resolve. Download and import video & audio directly into your active project's <b>Media Pool</b> in one click with zero manual file dragging required.
-                    </p>
-
-                    <!-- Feature Tags -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2 w-full">
-                        <div class="flex items-center gap-2.5 text-sm font-medium text-sayso-text/90 bg-black/20 border border-white/5 rounded-lg p-3 min-w-0">
-                            <span class="text-sayso-yellow font-bold text-sm shrink-0">✓</span>
-                            <span class="leading-tight">Live YouTube browser overlay</span>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-sm font-medium text-sayso-text/90 bg-black/20 border border-white/5 rounded-lg p-3 min-w-0">
-                            <span class="text-sayso-yellow font-bold text-sm shrink-0">✓</span>
-                            <span class="leading-tight">MP4 Video & MP3 Audio</span>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-sm font-medium text-sayso-text/90 bg-black/20 border border-white/5 rounded-lg p-3 min-w-0">
-                            <span class="text-sayso-yellow font-bold text-sm shrink-0">✓</span>
-                            <span class="leading-tight">Direct Media Pool auto-import</span>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-sm font-medium text-sayso-text/90 bg-black/20 border border-white/5 rounded-lg p-3 min-w-0">
-                            <span class="text-sayso-yellow font-bold text-sm shrink-0">✓</span>
-                            <span class="leading-tight">macOS (.dmg) & Windows (.exe)</span>
-                        </div>
-                    </div>
-
-                    <!-- Download Action Buttons -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-2">
-                        <a
-                            href="/Altn_YouTube_Downloader_Installer.dmg"
-                            download
-                            class="px-6 py-3 rounded-xl bg-white text-black hover:bg-gray-200 font-bold text-center text-sm !no-underline transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-95"
-                        >
-                            macOS Installer (.dmg)
-                        </a>
-                        <a
-                            href="/Altn_YouTube_Downloader_Installer.exe"
-                            download
-                            class="px-6 py-3 rounded-xl bg-sayso-yellow text-black hover:bg-yellow-400 font-bold text-center text-sm !no-underline transition-all hover:scale-[1.02] active:scale-95"
-                        >
-                            Windows Installer (.exe)
-                        </a>
-                    </div>
+            <!-- Full-Width Huge Video Showcase Player -->
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-sayso-text/20 bg-black shadow-2xl max-w-5xl mx-auto">
+                <video 
+                    class="w-full h-full object-cover rounded-2xl"
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
+                    controls
+                    poster="/og-banner.png"
+                >
+                    <source src="/plugin-demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-sayso-yellow text-xs font-bold tracking-wide">
+                    LIVE DEMO PLAYER
                 </div>
             </div>
         </section>
