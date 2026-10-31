@@ -16,7 +16,14 @@ export default function BeforeAfterSlider({
   className = "",
 }: BeforeAfterSliderProps) {
   const [position, setPosition] = useState(50);
+  const [failed, setFailed] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // An image can fail before hydration attaches onError, so check once on mount too.
+  useEffect(() => {
+    const imgs = containerRef.current?.querySelectorAll("img") ?? [];
+    if (Array.from(imgs).some((img) => img.complete && img.naturalWidth === 0)) setFailed(true);
+  }, []);
 
   const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!containerRef.current || e.buttons !== 1) return;
@@ -52,6 +59,7 @@ export default function BeforeAfterSlider({
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         loading="lazy"
         decoding="async"
+        onError={() => setFailed(true)}
         draggable={false}
       />
 
@@ -66,9 +74,16 @@ export default function BeforeAfterSlider({
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
           decoding="async"
+          onError={() => setFailed(true)}
           draggable={false}
         />
       </div>
+
+      {failed && (
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-sayso-background text-sm text-sayso-text/50 pointer-events-none">
+          Preview unavailable
+        </div>
+      )}
 
       {/* Slider Line */}
       <div
