@@ -50,6 +50,8 @@ export default function BeforeAfterSlider({
         src={afterImage}
         alt={afterAlt}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        loading="lazy"
+        decoding="async"
         draggable={false}
       />
 
@@ -62,6 +64,8 @@ export default function BeforeAfterSlider({
           src={beforeImage}
           alt={beforeAlt}
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
           draggable={false}
         />
       </div>
